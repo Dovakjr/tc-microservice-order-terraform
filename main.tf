@@ -25,15 +25,7 @@ module "gke" {
   ip_range_pods            = ""
   ip_range_services        = ""
   region                   = "us-east1"
-
-
-  node_pools = {
-    default = {
-      max_pods     = 3
-      node_count   = 1
-      zones        = ["us-east1-b"]  # Specify the desired zone here
-    }
-  }
+  zones  = ["us-east1-b"]
 }
 
 resource "null_resource" "gke_update_kubeconfig" {
