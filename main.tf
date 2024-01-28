@@ -10,21 +10,21 @@ terraform {
 }
 
 provider "google" {
-  project = "techchallenge-fastfood"
-  region  = "us-east1-b"
+  project  = "techchallenge-fastfood"
+  location = "us-east1-b"
 }
 
 module "gke" {
-  name               = "tc-microservice-order-cluster"
-  source             = "terraform-google-modules/kubernetes-engine/google"
-  project_id         = "techchallenge-fastfood"
-  network            = "default"
-  subnetwork         = "default"
-  initial_node_count = 1
+  name                     = "tc-microservice-order-cluster"
+  source                   = "terraform-google-modules/kubernetes-engine/google"
+  project_id               = "techchallenge-fastfood"
+  network                  = "default"
+  subnetwork               = "default"
+  initial_node_count       = 1
   remove_default_node_pool = true
-  ip_range_pods      = ""
-  ip_range_services  = ""
-  region             = "us-east1-b"
+  ip_range_pods            = ""
+  ip_range_services        = ""
+  location                 = "us-east1-b"
 }
 
 resource "null_resource" "gke_update_kubeconfig" {
