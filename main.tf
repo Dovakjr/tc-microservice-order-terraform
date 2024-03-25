@@ -10,14 +10,14 @@ terraform {
 }
 
 provider "google" {
-  project  = "techchallenge-fastfood"
+  project  = "hackathon-fiap-ponto"
   region = "us-east1"
 }
 
 module "gke" {
-  name                     = "tc-microservice-order-cluster"
+  name                     = "hk-microservice-auth-cluster"
   source                   = "terraform-google-modules/kubernetes-engine/google"
-  project_id               = "techchallenge-fastfood"
+  project_id               = "hackathon-fiap-ponto"
   network                  = "default"
   subnetwork               = "default"
   initial_node_count       = 1
