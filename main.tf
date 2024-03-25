@@ -15,7 +15,7 @@ provider "google" {
 }
 
 module "gke" {
-  name                     = "hk-microservice-auth-cluster"
+  name                     = "hk-microservice-ponto-cluster"
   source                   = "terraform-google-modules/kubernetes-engine/google"
   project_id               = "hackathon-fiap-ponto"
   network                  = "default"

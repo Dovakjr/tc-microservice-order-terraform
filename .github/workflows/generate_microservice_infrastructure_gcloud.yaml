@@ -49,7 +49,7 @@ jobs:
         env:
           PROJECT_ID: techchallenge-fastfood
           APPLICATION_CREDENTIALS: ${{ secrets.GOOGLE_CREDENTIALS_BASE64 }}
-          CLUSTER_NAME: hk-microservice-auth-cluster
+          CLUSTER_NAME: hk-microservice-ponto-cluster
           ZONE_NAME: us-east1
         with:
           args: apply -f app.k8sConfig.yaml 
